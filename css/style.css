@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #00415a;
+}
+
+.mainB {
+    position: relative;
+    width: 430px;
+    height: 430px;
+    background: linear-gradient(#6ab9ff, #0090d2);
+    border-radius: 50%;
+    border: 9px solid #fff;
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, .7),
+        0 20px 100px rgba(0, 0, 0, .7);
+    overflow: hidden;
+}
+
+.flyP {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: animate-plane 1s linear infinite;
+}
+
+.flyP img {
+    position: relative;
+    z-index: 3;
+}
+
+@keyframes animate-plane {
+    0% {
+        transform: translate(4px, 4px);
+    }
+
+    50% {
+        transform: translate(-4px, -4px);
+    }
+
+    100% {
+        transform: translate(4px, 4px);
+    }
+}
+
+.flyC {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.flyC img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .7;
+    z-index: 2;
+    animation: animate-cloud 1s linear infinite;
+}
+
+@keyframes animate-cloud {
+    0% {
+        transform: translateX(400px);
+    }
+
+    40%,
+    100% {
+        transform: translateX(-400px);
+    }
+}
+
+.flyC img:nth-child(1) {
+    top: 50px;
+    animation-delay: -2s;
+    animation: animate-cloud 1.25s linear infinite;
+}
+
+.flyC img:nth-child(2) {
+    top: 180px;
+    animation-delay: -1s;
+    animation: animate-cloud 1s linear infinite;
+}
+
+.flyC img:nth-child(3) {
+    top: 100px;
+    animation-delay: -2.5s;
+    animation: animate-cloud .75s linear infinite;
+}
+.sound audio{
+   margin: -350px;
+    
+}
